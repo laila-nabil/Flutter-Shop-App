@@ -1,6 +1,6 @@
-# shop
+# E-commerce Shop App
 
-An E-Commerce Flutter App
+E-commerce Shop App Flutter App
 
 ## Getting Started
 
