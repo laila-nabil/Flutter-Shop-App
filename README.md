@@ -35,12 +35,10 @@ ___________
 
 |Adding item to cart|Cart screen|Proceed to checkout|
 |---|---|---|
-|![Screenshot_1635802212_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139746347-b09f2c1a-e9b9-43b9-91f7-408e709c9f28.png)|![Screenshot_1635793200_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139744840-554386d4-8c68-46f3-98d7-6d2c6967d280.png)|
-![Screenshot_1635793209_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139746186-7ceea163-1fad-44f3-b8f5-c2d785f694e6.png)|
-
+|![Screenshot_1635802212_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139746347-b09f2c1a-e9b9-43b9-91f7-408e709c9f28.png)|![Screenshot_1635793200_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139744840-554386d4-8c68-46f3-98d7-6d2c6967d280.png)|![Screenshot_1635793209_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139746186-7ceea163-1fad-44f3-b8f5-c2d785f694e6.png)|
 
 #### Main drawer
+
 |Main drawer|
 |---|
-|![Screenshot_1635793496_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139746434-cd3df59a-7c5e-4bcc-9e62-85c59b5091a3.png)|
-
+|<img src="https://user-images.githubusercontent.com/22998093/139746434-cd3df59a-7c5e-4bcc-9e62-85c59b5091a3.png" height="800" />|
