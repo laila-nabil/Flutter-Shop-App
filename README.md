@@ -7,7 +7,7 @@ An E-Commerce Flutter App
 * [Authentication of user](#authentication-screen) 
 * [Grid of products visible for all users](#products-overview-screen)
 * [Order or cancel items from cart](#cart-screen)
-* Drawer to navigate between screens(#drawer)
+* [Drawer to navigate between screens](#drawer)
 * [View orders](#orders-screen)
 * [Add new products/Edit personal products](#personal-products-screen-for-sellers)
 ___________
@@ -54,9 +54,4 @@ ___________
 
 |Personal products screen|Edit an existing product|updated list of products|Add a new product|
 |---|---|---|---|
-|![Screenshot_1635793867_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748136-666a87d8-c3ee-4f68-ad0a-88b6a44081d7.png)|![Screenshot_1635793875_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748329-f9779efc-6bae-4650-8f07-065a61357d56.png)|
-![Screenshot_1635793879_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748457-6d1bb299-d038-4208-91da-d226252b87c3.png)|![Screenshot_1635793956_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748648-7eea90f7-5a75-4932-8f88-08fd2dc49b9a.png)|
-
-
-
-
+|![Screenshot_1635793867_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748136-666a87d8-c3ee-4f68-ad0a-88b6a44081d7.png)|![Screenshot_1635793875_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748329-f9779efc-6bae-4650-8f07-065a61357d56.png)|![Screenshot_1635793879_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748457-6d1bb299-d038-4208-91da-d226252b87c3.png)|![Screenshot_1635793956_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139748648-7eea90f7-5a75-4932-8f88-08fd2dc49b9a.png)|
