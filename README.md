@@ -12,6 +12,7 @@ An E-Commerce Flutter App
 ___________
 ### Video of app
 
+![shop_a](https://user-images.githubusercontent.com/22998093/139744275-2b3bf35f-604f-433b-a04a-0e1052ea9a5e.gif)
 
 ___________
 ### Screens in the app
@@ -28,3 +29,12 @@ ___________
 |Products overview screen|Filtering items|show favourites only|
 |---|---|---|
 |![Screenshot_1635793066_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139742698-037de69e-739d-4f06-a641-09fc10c00557.png)|![Screenshot_1635793073_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139742765-3648475e-50b6-4d2c-b4a0-7d0a1cd43358.png)|![Screenshot_1635793076_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139742860-bd0b9d68-1e4f-4d43-ad8e-084a83c3e0b3.png)|
+
+
+#### Cart screen
+
+|Adding item to cart|Cart screen|
+|---|---|
+|  |![Screenshot_1635793200_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139744840-554386d4-8c68-46f3-98d7-6d2c6967d280.png)|
+
+
