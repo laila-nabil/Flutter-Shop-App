@@ -1,9 +1,9 @@
-# E-commerce Shop App
+# shop
 
-E-commerce Shop App Flutter App
+An E-Commerce Flutter App
 
-## Getting Started
+## The projects includes
 
-This project includes:
-
+* Authentication of user
+ 
 
