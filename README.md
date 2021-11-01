@@ -6,7 +6,7 @@ An E-Commerce Flutter App
 
 * [Authentication of user](#authentication-screen) 
 * [Grid of products visible for all users](#products-overview-screen)
-* Adding items to cart
+* [Adding items to cart](#cart-screen)
 * Order or cancel items from cart
 * Add new products/Edit personal products
 ___________
@@ -21,7 +21,7 @@ ___________
 
 |Login Page|Sign up Page|
 |--------|---------|
-|![Screenshot_1635792998_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139734136-04244eea-5aa7-4f3e-ac6d-ce5b30b74cb0.png)|![Screenshot_1635793007_google-pixel4-justblack-portrait](https://user-images.githubusercontent.com/22998093/139734170-c839684f-b730-4cf9-bf99-b9e3295d1896.png)|
+|<img src="https://user-images.githubusercontent.com/22998093/139734136-04244eea-5aa7-4f3e-ac6d-ce5b30b74cb0.png" height="800" />|<img src="https://user-images.githubusercontent.com/22998093/139734170-c839684f-b730-4cf9-bf99-b9e3295d1896.png" height="800" />|
 |Login includes email and password verification with feedback to user|Sign up includes basic email validation|
 
 #### Products overview screen
@@ -42,3 +42,12 @@ ___________
 |Main drawer|
 |---|
 |<img src="https://user-images.githubusercontent.com/22998093/139746434-cd3df59a-7c5e-4bcc-9e62-85c59b5091a3.png" height="800" />|
+
+#### Orders screen
+
+|1|2|
+|---|---|
+|<img src="https://user-images.githubusercontent.com/22998093/139747532-81973d91-d909-43af-92ee-b4cd73bf7a7d.png" height="800" />|<img src="https://user-images.githubusercontent.com/22998093/139747650-3f5cdf7d-ac2f-43e7-a22b-087b7670545d.png" height="800" />|
+
+#### Personal products screen
+
