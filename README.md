@@ -1,6 +1,6 @@
 # Myshop
 
-An E-Commerce Flutter App
+An E-Commerce Flutter App with Firebase as backend
 
 ## The projects includes
 
