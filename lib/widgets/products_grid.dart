@@ -15,14 +15,18 @@ class ProductsGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     final productsData = Provider.of<Products>(context);
     final loadedProducts = showFav ? productsData.favItems : productsData.items;
+    final screenSize = MediaQuery.of(context).size;
+    final isPortrait = screenSize.width < screenSize.height;
     return GridView.builder(
       padding: const EdgeInsets.all(10.0),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        childAspectRatio: 2 / 3,
-        crossAxisCount: 2,
+        childAspectRatio: isPortrait ? 2 / 3 : 1,
+        // crossAxisCount: isPortrait ? 2 : 3,
+        crossAxisCount: screenSize.width <= screenSize.height/2 ? 2 : screenSize.width < 800 ? 3 : 5,
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
       ),
+
       itemBuilder: (ctx, index) {
         return ChangeNotifierProvider.value(
           value: loadedProducts[index],

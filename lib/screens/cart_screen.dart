@@ -15,7 +15,8 @@ class CartScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Shopping Cart',
-          style: Theme.of(context).appBarTheme.textTheme.title,
+          // style: Theme.of(context).appBarTheme.textTheme.title,
+          style: Theme.of(context).appBarTheme.titleTextStyle,
         ),
       ),
       body: Column(
