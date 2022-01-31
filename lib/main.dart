@@ -1,3 +1,9 @@
+// Run Debug:
+// fvm flutter run -d chrome --web-renderer html
+//
+// Release Build:
+// fvm flutter build web --web-renderer html --release
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './screens/products_overview_screen.dart';

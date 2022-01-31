@@ -26,12 +26,13 @@ class ProductItem extends StatelessWidget {
             tag: product.id,
             child: Container(
               color: Colors.white,
-              child: FadeInImage(
-                placeholder:
-                    AssetImage('assets/images/product-placeholder.png'),
-                image: NetworkImage(product.imageUrl),
-                fit: BoxFit.fitWidth,
-              ),
+              // child: FadeInImage(
+              //   placeholder:
+              //       AssetImage('assets/images/product-placeholder.png'),
+              //   image: NetworkImage(product.imageUrl),
+              //   fit: BoxFit.fitWidth,
+              // ),
+              child: Image.network(product.imageUrl),
             ),
           ),
           footer: Container(
