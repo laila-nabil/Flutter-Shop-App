@@ -1,8 +1,46 @@
-// Run Debug:
+// Run Debug Web:
 // fvm flutter run -d chrome --web-renderer html
 //
-// Release Build:
-// fvm flutter build web --web-renderer html --release
+// Release Build Web:
+// fvm flutter build web --dart-define api_key=key --web-renderer html --release
+
+// Web setup
+// in windows powershell as admin, run : fvm use stable
+// a .fvm folder is added with shortcut
+// get full path of shortcut and add to project as flutter path instead of original path
+// fvm flutter config --enable-web in terminal/windows powershell as admin
+//to build : fvm flutter build web --dart-define api_key=key
+//to init hosting on firebase:
+//set up project at firebase
+//from terminal:
+// firebase init hosting
+// use build/web as public directory, single web page, not overwrite
+// fvm flutter build web --dart-define api_key=key
+// firebase deploy --only hosting
+
+//to run on web
+// fvm flutter run -d edge --dart-define api_key=key
+
+//to reupload
+// fvm flutter build web --dart-define api_key=key
+// firebase deploy --only hosting
+
+//to add another url
+//firebase hosting:sites:create sitename
+//firebase hosting:channel:create sitename
+//firebase hosting:channel:deploy flutter-shop
+//in firebase.json
+// {
+// "hosting": {
+// "site": "sitename",
+//
+// "public": "public",
+// ...
+// }
+// }
+//firebase deploy --only hosting:sitename
+
+//firebase deploy --only hosting:flutter-shop
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
