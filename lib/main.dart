@@ -22,8 +22,10 @@
 // fvm flutter run -d edge --dart-define api_key=key
 
 //to reupload
-// fvm flutter build web --dart-define api_key=key
+// fvm flutter build web --dart-define api_key=key --web-renderer html --release
 // firebase deploy --only hosting
+//or
+//firebase deploy --only hosting:flutter-shop
 
 //to add another url
 //firebase hosting:sites:create sitename
@@ -33,14 +35,10 @@
 // {
 // "hosting": {
 // "site": "sitename",
-//
-// "public": "public",
 // ...
 // }
 // }
 //firebase deploy --only hosting:sitename
-
-//firebase deploy --only hosting:flutter-shop
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
