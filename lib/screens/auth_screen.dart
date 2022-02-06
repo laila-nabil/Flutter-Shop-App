@@ -152,6 +152,35 @@ class _AuthCardState extends State<AuthCard>
     });
   }
 
+  Future<void> _demoLogin() async {
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      await Provider.of<Auth>(context, listen: false)
+          .login('test@test.com', '123456');
+    } on HttpException catch (error) {
+      var errorMessage = 'Authentication failed!';
+      if (error.toString().contains('EMAIL_EXISTS')) {
+        errorMessage = 'This email address is already used';
+      } else if (error.toString().contains('INVALID_EMAIL')) {
+        errorMessage = 'This email address is not vaild';
+      } else if (error.toString().contains('WEAK_PASSWORD')) {
+        errorMessage = 'The password is too weak';
+      } else if (error.toString().contains('EMAIL_NOT_FOUND')) {
+        errorMessage = 'This email address is not found, Please Sign up';
+      } else if (error.toString().contains('INVALID_PASSWORD')) {
+        errorMessage = 'This password is not correct';
+      }
+      _showErrorDialog(errorMessage);
+    } catch (error) {
+      const errorMessage = 'Could not authenticate, Please try again later';
+      _showErrorDialog(errorMessage);
+    }
+    setState(() {
+      _isLoading = false;
+    });
+  }
   void _switchAuthMode() {
     if (_authMode == AuthMode.Login) {
       setState(() {
@@ -262,7 +291,7 @@ class _AuthCardState extends State<AuthCard>
                     textColor: Theme.of(context).primaryTextTheme.button.color,
                   ),
                 SizedBox(
-                  height: 20,
+                  height: 10,
                 ),
                   FlatButton(
                     child: Text(
@@ -272,6 +301,10 @@ class _AuthCardState extends State<AuthCard>
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     textColor: Theme.of(context).accentColor,
                   ),
+                SizedBox(
+                  height: 10,
+                ),
+                TextButton(onPressed: _demoLogin, child: Text('Try Demo'))
               ],
             ),
           ),
