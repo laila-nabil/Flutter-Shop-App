@@ -92,13 +92,10 @@ class MyApp extends StatelessWidget {
               appBarTheme: AppBarTheme(
                   elevation: 0.0,
                   backgroundColor: bgColor,
-                  // textTheme: TextTheme(
-                  //     headline6: Theme.of(context)
-                  //         .textTheme
-                  //         .headline6
-                  //         .copyWith(color: accentColor)),
-                  titleTextStyle: TextStyle(
-                      color: accentColor),
+                  titleTextStyle: Theme.of(context)
+                          .textTheme
+                          .headline6
+                          .copyWith(color: accentColor),
                 iconTheme: IconThemeData(color :accentColor ),
                 actionsIconTheme: IconThemeData(color : accentColor)
 
