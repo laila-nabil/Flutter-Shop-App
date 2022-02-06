@@ -188,6 +188,7 @@ class _AuthCardState extends State<AuthCard>
           key: _formKey,
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
                 TextFormField(
                   decoration: InputDecoration(labelText: 'E-Mail'),
@@ -260,14 +261,17 @@ class _AuthCardState extends State<AuthCard>
                     color: Theme.of(context).primaryColor,
                     textColor: Theme.of(context).primaryTextTheme.button.color,
                   ),
-                FlatButton(
-                  child: Text(
-                      '${_authMode == AuthMode.Login ? 'SIGNUP' : 'LOGIN'} INSTEAD'),
-                  onPressed: _isLoading ? null : _switchAuthMode,
-                  padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
-                  materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                  textColor: Theme.of(context).accentColor,
+                SizedBox(
+                  height: 20,
                 ),
+                  FlatButton(
+                    child: Text(
+                        '${_authMode == AuthMode.Login ? 'SIGNUP' : 'LOGIN'} INSTEAD'),
+                    onPressed: _isLoading ? null : _switchAuthMode,
+                    padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 4),
+                    materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    textColor: Theme.of(context).accentColor,
+                  ),
               ],
             ),
           ),
