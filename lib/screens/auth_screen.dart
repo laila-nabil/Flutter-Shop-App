@@ -158,7 +158,7 @@ class _AuthCardState extends State<AuthCard>
     });
     try {
       await Provider.of<Auth>(context, listen: false)
-          .login('test@test.com', '123456');
+          .login('demo@test.com', '111222');
     } on HttpException catch (error) {
       var errorMessage = 'Authentication failed!';
       if (error.toString().contains('EMAIL_EXISTS')) {
