@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
 import '../providers/auth_provider.dart';
 import '../providers/product_provider.dart';
 import '../providers/cart_provider.dart';
@@ -26,12 +28,6 @@ class ProductItem extends StatelessWidget {
             tag: product.id,
             child: Container(
               color: Colors.white,
-              // child: FadeInImage(
-              //   placeholder:
-              //       AssetImage('assets/images/product-placeholder.png'),
-              //   image: NetworkImage(product.imageUrl),
-              //   fit: BoxFit.fitWidth,
-              // ),
               child: Image.network(product.imageUrl),
             ),
           ),
@@ -41,87 +37,70 @@ class ProductItem extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Consumer<Product>(
-                      builder: (ctx, product, child) => IconButton(
-                          color: theme.accentColor,
-                          onPressed: () async {
-                            try {
-                              await product.toggleFav(
-                                  authData.token, authData.userId);
-                            } catch (error) {
-                              ScaffoldMessenger.of(context)
-                                  .showSnackBar(SnackBar(
-                                      content: Text(
-                                'Couldn\'t add to Favorite',
-                                style: TextStyle(
-                                    color: Theme.of(context).errorColor),
-                              )));
-                            }
-                          },
-                          icon: Icon(product.isFavorite
-                              ? Icons.favorite
-                              : Icons.favorite_border))),
                   Expanded(
-                    child: Text(
+                    flex: 1,
+                    child: Consumer<Product>(
+                        builder: (ctx, product, child) => IconButton(
+                            color: theme.accentColor,
+                            onPressed: () async {
+                              try {
+                                await product.toggleFav(
+                                    authData.token, authData.userId);
+                              } catch (error) {
+                                ScaffoldMessenger.of(context)
+                                    .showSnackBar(SnackBar(
+                                        content: Text(
+                                  'Couldn\'t add to Favorite',
+                                  style: TextStyle(
+                                      color: Theme.of(context).errorColor),
+                                )));
+                              }
+                            },
+                            icon: Icon(product.isFavorite
+                                ? Icons.favorite
+                                : Icons.favorite_border))),
+                  ),
+                  Expanded(
+                    flex: 3,
+                    child: AutoSizeText(
                       product.title,
                       textAlign: TextAlign.center,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),
+                      minFontSize: 15,
+                      maxFontSize: 30,
                       overflow: TextOverflow.fade,
                     ),
                   ),
-                  customIconButton(
-                      splashColor: theme.accentColor.withOpacity(1),
-                      iconColor: theme.accentColor,
-                      bgColor: Colors.white,
-                      onPressedFunction: () {
-                        cart.addItem(product.id, product.price, product.title);
-                        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text(product.title + ' added to the cart'),
-                          duration: Duration(seconds: 2),
-                          action: SnackBarAction(
-                              label: 'UNDO',
-                              onPressed: () {
-                                cart.changeQuantity(product.id, false);
-                                ScaffoldMessenger.of(context)
-                                    .showSnackBar(SnackBar(
-                                  content: Text(
-                                    product.title +
-                                        ' was not added to the cart',
-                                    style: TextStyle(color: theme.errorColor),
-                                  ),
-                                  duration: Duration(seconds: 2),
-                                ));
-                              }),
-                        ));
-                      },
-                      icon: Icons.shopping_cart),
-                  // IconButton(
-                  //     splashColor: theme.accentColor.withOpacity(1),
-                  //     color: theme.accentColor,
-                  //     onPressed: () {
-                  //       cart.addItem(product.id, product.price, product.title);
-                  //       ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                  //       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                  //         content: Text(product.title + ' added to the cart'),
-                  //         duration: Duration(seconds: 2),
-                  //         action: SnackBarAction(
-                  //             label: 'UNDO',
-                  //             onPressed: () {
-                  //               cart.changeQuantity(product.id, false);
-                  //               ScaffoldMessenger.of(context)
-                  //                   .showSnackBar(SnackBar(
-                  //                 content: Text(
-                  //                   product.title +
-                  //                       ' was not added to the cart',
-                  //                   style: TextStyle(color: theme.errorColor),
-                  //                 ),
-                  //                 duration: Duration(seconds: 2),
-                  //               ));
-                  //             }),
-                  //       ));
-                  //     },
-                  //     icon: const Icon(Icons.shopping_cart)),
+                  Expanded(
+                    flex: 1,
+                    child: customIconButton(
+                        splashColor: theme.accentColor.withOpacity(1),
+                        iconColor: theme.accentColor,
+                        bgColor: Colors.white,
+                        onPressedFunction: () {
+                          cart.addItem(product.id, product.price, product.title);
+                          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+                          ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                            content: Text(product.title + ' added to the cart'),
+                            duration: Duration(seconds: 2),
+                            action: SnackBarAction(
+                                label: 'UNDO',
+                                onPressed: () {
+                                  cart.changeQuantity(product.id, false);
+                                  ScaffoldMessenger.of(context)
+                                      .showSnackBar(SnackBar(
+                                    content: Text(
+                                      product.title +
+                                          ' was not added to the cart',
+                                      style: TextStyle(color: theme.errorColor),
+                                    ),
+                                    duration: Duration(seconds: 2),
+                                  ));
+                                }),
+                          ));
+                        },
+                        icon: Icons.shopping_cart),
+                  ),
                 ],
               )),
         ),
