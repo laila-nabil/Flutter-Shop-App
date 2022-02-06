@@ -206,7 +206,7 @@ class _AuthCardState extends State<AuthCard>
       ),
 
       child: AnimatedContainer(
-        height: _authMode == AuthMode.Signup ? 320 : 260,
+        height: _authMode == AuthMode.Signup ? 360 : 300,
         duration: Duration(milliseconds: 300),
         curve: Curves.easeIn,
         constraints:
@@ -301,9 +301,6 @@ class _AuthCardState extends State<AuthCard>
                     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                     textColor: Theme.of(context).accentColor,
                   ),
-                SizedBox(
-                  height: 10,
-                ),
                 TextButton(onPressed: _demoLogin, child: Text('Try Demo'))
               ],
             ),
